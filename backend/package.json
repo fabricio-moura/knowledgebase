@@ -8,12 +8,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fabricio-moura/knowledge.git"
+    "url": "git+https://github.com/fabricio-moura/knowledgebase.git"
   },
   "author": "Fabrício Moura",
   "license": "GNU GPLv3",
   "bugs": {
-    "url": "https://github.com/fabricio-moura/knowledge/issues"
+    "url": "https://github.com/fabricio-moura/knowledgebase/issues"
   },
-  "homepage": "https://github.com/fabricio-moura/knowledge#readme"
+  "homepage": "https://github.com/fabricio-moura/knowledgebase#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.0",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.6.5"
+  }
 }
