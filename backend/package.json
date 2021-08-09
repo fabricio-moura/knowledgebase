@@ -1,0 +1,19 @@
+{
+  "name": "basedeconhecimento",
+  "version": "1.0.0",
+  "description": "Base de conhecimento",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabricio-moura/knowledge.git"
+  },
+  "author": "Fabrício Moura",
+  "license": "GNU GPLv3",
+  "bugs": {
+    "url": "https://github.com/fabricio-moura/knowledge/issues"
+  },
+  "homepage": "https://github.com/fabricio-moura/knowledge#readme"
+}
