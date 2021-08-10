@@ -1,0 +1,27 @@
+<%- include('../../partials/header.ejs');%>
+<%- include('../../partials/navbar.ejs');%>
+
+<div class="container">
+    <div class="card">        
+            <div class="card-body">
+                <blockquote class="blockquote blockquote-danger mb-0">
+                <h2 class="card-title">Cadastro de Categorias</h2>
+                <form method="POST" action="/categories/save">
+                    <div class="form-group">
+                        <label for="input-category-name">Nome da categoria:</label>
+                        <input class="form-control" type="text" name="title" placeholder="Defina o nome da categoria...">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success">Cadastrar</button>
+                        <a href="/" class="btn btn-danger">Voltar</a>
+                    </div>
+                    <!-- <hr class="horizontal dark mb-5"> -->
+                </form>
+        </blockquote>
+    </div>
+
+</div>
+
+</div>
+
+<%- include('../../partials/footer.ejs');%>

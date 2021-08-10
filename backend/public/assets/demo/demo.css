@@ -14,6 +14,27 @@
   width: 100%;
 }
 
+.pick-class-label {
+  border-radius: 8px;
+  border: 1px solid #E3E3E3;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  margin-right: 10px;
+  padding: 23px;
+  text-align: center;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.offline-doc .page-header {
+  display: flex;
+  align-items: center;
+}
+
 .typography-line span {
   bottom: 10px;
   color: #c0c1c2;
@@ -94,6 +115,7 @@
 }
 
 #notifications {
+  background-color: #FFFFFF;
   display: block;
   width: 100%;
   position: relative;
@@ -128,17 +150,14 @@
   color: #ddd !important;
 }
 
-
 .parallax {
   width: 100%;
   height: 570px;
-
   display: block;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-
 }
 
 .logo-container .logo {
@@ -209,7 +228,6 @@
   margin-top: 0;
 }
 
-
 .parallax .parallax-image {
   width: 100%;
   overflow: hidden;
@@ -226,7 +244,6 @@
     height: 640px;
     overflow: hidden;
   }
-
   .parallax .parallax-image img {
     height: 100%;
     width: auto;
@@ -249,6 +266,7 @@
 .separator.separator-gray{
     background-color: #EEEEEE;
 }*/
+
 .social-buttons-demo .btn {
   margin-right: 5px;
   margin-bottom: 7px;
@@ -289,12 +307,10 @@
 }
 
 @media (max-width: 768px) {
-
   .btn,
   .btn-morphing {
     margin-bottom: 10px;
   }
-
   .parallax .motto {
     top: 170px;
     margin-top: 0;
@@ -306,6 +322,7 @@
 /*       Loading dots  */
 
 /*      transitions */
+
 .presentation .front,
 .presentation .front:after,
 .presentation .front .btn,
@@ -316,7 +333,6 @@
   -o-transition: all .2s;
   transition: all .2s;
 }
-
 
 #images h4 {
   margin-bottom: 30px;
@@ -374,12 +390,12 @@
   padding: 0;
 }
 
-/*.section-navbars{
-    padding-top: 0;
-}*/
+.section-navbars {
+  padding-top: 0;
+}
+
 #navbar .navbar {
   margin-bottom: 20px;
-  z-index: 1 !important;
 }
 
 #navbar .navbar-toggler,
@@ -387,12 +403,12 @@
   pointer-events: none;
 }
 
-.section-pagination {
-  padding-bottom: 0;
+.section-tabs {
+  background: #EEEEEE;
 }
 
-.section-pagination .pagination:last-of-type {
-  margin-bottom: 7px;
+.section-pagination {
+  padding-bottom: 0;
 }
 
 .section-download {
@@ -433,7 +449,7 @@
 }
 
 .brand .h1-seo {
-  font-size: 5em;
+  font-size: 2.8em;
   text-transform: uppercase;
   font-weight: 300;
 }
@@ -475,6 +491,10 @@
   margin-bottom: 10px;
 }
 
+.section-basic {
+  padding-top: 0;
+}
+
 .section-images {
   padding-bottom: 0;
 }
@@ -483,23 +503,4 @@
   .section-navbars .navbar-collapse {
     display: none !important;
   }
-}
-
-@media screen and (max-width: 576px) {
-  .typography-line span {
-    width: 70px;
-    margin-left: 5px;
-  }
-}
-
-.offline-doc .page-header:before {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  display: block;
-  left: 0;
-  top: 0;
-  content: "";
-  background: rgba(0, 0, 0, .5);
 }
