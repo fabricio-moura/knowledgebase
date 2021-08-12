@@ -1,0 +1,51 @@
+<%- include('../../partials/header.ejs'); %>
+<%- include('../../partials/navbar.ejs'); %>
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <blockquote class="blockquote blockquote-dark mb-0">
+                <h2 class="card-title">Cadastro de Artigos</h2>
+                <form method="POST" action="/articles/save">
+                    <div class="form-group">
+                        <label class="formlabel" for="input-category-name">Título do artigo:</label>
+                        <input class="form-control " type="text" name="title"
+                               placeholder="Insira o título do artigo...">
+                    </div>
+                    <div class="form-group">
+                        <label for="article-body">Descrição do artigo:</label>
+                        <textarea id="body" name="body" class="form-control"
+                                  placeholder="Descreva seu artigo..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Categoria:</label>
+                        <select name="category" class="form-control">
+                            <% categories.forEach((category) => { %>
+                                <option value="<%= category.id %>"><%= category.title %></option>
+                            <% }) %>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success">Cadastrar</button>
+                        <a href="/admin/articles/" class="btn btn-primary">Voltar</a>
+                    </div>
+                </form>
+            </blockquote>
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/footer.ejs'); %>
+
+<script src="/assets/tinymce/tinymce.min.js"></script>
+
+<script>
+    tinymce.init({
+        selector: "#body",
+        language: "pt_BR",
+        plugins: [
+            'advlist autolink link image imagetools lists autoresize code codesample emoticons insertdatetime media paste table template wordcount print searchreplace fullscreen save'
+        ],
+
+    })
+</script>

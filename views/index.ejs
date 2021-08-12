@@ -1,0 +1,31 @@
+<%- include('partials/header.ejs');%>
+<%- include('partials/homenavbar.ejs');%>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Artigos</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+
+            
+          </div>
+        <% articles.forEach(article =>{ %>
+        <div class="card">
+            <div class="card-title">
+                <h2><%= article.title  %> </h2>
+            </div>
+            <div class="card-body">
+                <a href="/admin/article/edit/<%=article.id%>" class="btn btn-success">
+                    <i class="fas fa-newspaper"></i> Ler artigo
+                </a>
+            </div>
+        </div>
+        <%  })  %>
+    </div>
+    </blockquote>
+</body>
+
+
+
+<%- include('partials/footer.ejs');%>

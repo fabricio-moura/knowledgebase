@@ -1,0 +1,50 @@
+<%- include('../../partials/header.ejs'); %>
+<%- include('../../partials/navbar.ejs'); %>
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <blockquote class="blockquote blockquote-dark mb-0">
+                <h2 class="card-title">Listagem de Categorias</h2>
+                <a href="/admin/categories/new" class="btn btn-success">Nova Categoria</a>
+                <a href="/" class="btn btn-primary">Voltar</a>
+            </blockquote>
+        </div>
+        <div class="table-responsive-lg">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="bg-dark text-white">
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Slug</th>
+                        <th class="">Ações</th>
+                </thead>
+                </tr>
+                </thead>
+                <tbody>
+                    <% categories.forEach(category => { %>
+                    <tr>
+                        <td><%= category.id %></td>
+                        <td><%= category.title %></td>
+                        <td><%= category.slug %></td>
+                        <td>
+                            <a href="/admin/categories/edit/<%=category.id%>" class="btn btn-warning" ><i
+                                    class="far fa-edit" ></i> Editar
+                            </a>
+
+                            <form method="POST" action="/categories/delete" style="display: inline;">
+                                <input type="hidden" name="id" value="<%= category.id %>">
+                                <button class="btn btn-danger"><i class="far fa-trash-alt"></i> Deletar
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </blockquote>
+</div>
+
+<%- include('../../partials/footer.ejs'); %>
